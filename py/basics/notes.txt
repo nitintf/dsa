@@ -1,0 +1,3 @@
+1. TUPLES are faster & smaller in size than LIST
+
+2. To copy use .copy / slice method / use constructor funtions 
