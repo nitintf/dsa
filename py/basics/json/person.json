@@ -1,0 +1,10 @@
+{
+    "name": "nitin",
+    "age": 21,
+    "city": "Meerut",
+    "hasChildren": false,
+    "titles": [
+        "engineer",
+        "webDeveloper"
+    ]
+}
