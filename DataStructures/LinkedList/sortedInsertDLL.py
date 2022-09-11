@@ -8,21 +8,21 @@ class Node(object):
 
 def sortedInsert(head, data):
     if head == None:
-        return Node(data, None, None)
-    if data <= head.data:
-        head.prev = Node(data, head.prev, head)
-        newHead = head.prev
-        newHead.next = head
-        return newHead
+        return Node(data)
+
+    walker = head
+    while walker.next != None and walker.data < data:
+        walker = walker.next
+
+    if walker.data < data:
+        walker.next = Node(data, None, walker)
+    elif walker.prev == None:
+        node = Node(data, head)
+        head.prev = node
+        head = node
     else:
-        i = 0
-        while head != None and head.data < data:
-            if head.next == None:
-                head.next = Node(data, head.next, head)
-            elif head.next.data > data:
-                head.next = Node(data, head.next, head)
-            if i == 0:
-                newHead = head
-            head = head.next
-            i += 1
-    return newHead
+        node = Node(data, walker, walker.prev)
+        walker.prev.next = node
+        walker.prev = node
+
+    return head
