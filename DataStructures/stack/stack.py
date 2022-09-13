@@ -4,11 +4,14 @@ from collections import deque
 class Stack:
     def __init__(self) -> None:
         self.container = deque()
+        self.size = 0
 
     def push(self, el):
+        self.size += 1
         self.container.append(el)
 
     def pop(self):
+        self.size -= 1
         return self.container.pop()
 
     def peek(self):
