@@ -44,7 +44,7 @@ class LinkedList:
         prev_node.next = new_node
 
     # C - O(N)
-    def delte_node(self, key):
+    def delete_node(self, key):
         curr_node = self.head
 
         if curr_node and curr_node.data == key:
