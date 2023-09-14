@@ -1,3 +1,13 @@
+"""
+Binary Search
+
+Time Complexity:
+The time complexity of binary search is O(log n), where n is the number of elements in the sorted array.
+
+Description:
+Binary search is a search algorithm used to find the position of a target value within a sorted array. It works by repeatedly dividing the search space in half until the target value is found or the search space is empty.
+"""
+
 
 def binarySearch_iterative(arr, target):
     low, high = 0, len(arr) - 1
