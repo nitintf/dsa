@@ -52,5 +52,6 @@ class UserEncoder(JSONEncoder):
 
 
 userJson = json.dumps(user, cls=UserEncoder)
+usJso = encode_user(user)
 
-print(userJson)
+print(userJson, usJso)
