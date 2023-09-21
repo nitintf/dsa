@@ -1,1 +1,11 @@
 output/
+*.o
+*.out
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.pdb
+*.dSYM/
