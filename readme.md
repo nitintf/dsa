@@ -1,1 +1,1 @@
-# DSA Practice with Python & C++
+# DSA with Python & C++
