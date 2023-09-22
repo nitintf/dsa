@@ -5,7 +5,7 @@ using std::vector;
 int findMin(vector<int>& nums)
 {
   int n = nums.size();
-  int min = INT_MIN;
+  int min = INT_MAX;
 
   for (int i = 0; i < n; i++)
   {
@@ -21,7 +21,7 @@ int findMin(vector<int>& nums)
 int findMax(vector<int>& nums)
 {
   int n = nums.size();
-  int max = INT_MAX;
+  int max = INT_MIN;
 
   for (int i = 0; i < n; i++)
   {
@@ -34,7 +34,7 @@ int findMax(vector<int>& nums)
   return max;
 }
 
-int canBloom(vector<int>& bloomDay, int day, int m, int k)
+bool canBloom(vector<int>& bloomDay, int day, int m, int k)
 {
   int counter = 0;
   int noOfBlooms = 0;
