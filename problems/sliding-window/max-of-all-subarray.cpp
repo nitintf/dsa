@@ -45,6 +45,41 @@ vector<int> maxOfSubArraysSlidingWindow(int arr[], int n, int k) {
   return ans;
 }
 
+// TC: O(n)
+// SC: O(k)
+vector<int> findMaxInSubArrayWithSizeK(vector<int> a, int n, int k) {
+  vector<int> result;
+
+  if (k > n) {
+    result.push_back(*max_element(a.begin(), a.end()));
+    return result;
+  }
+
+  deque<int> dq;
+  int left = 0, right = 0;
+
+  while (right < n) {
+    while (!dq.empty() && dq.back() < a[right]) {
+      dq.pop_back();
+    }
+    dq.push_back(a[right]);
+
+    if (right - left + 1 < k) {
+      right++;
+    }
+    else if (right - left + 1 == k) {
+      result.push_back(dq.front());
+      if (a[left] == dq.front()) {
+        dq.pop_front();
+      }
+      right++;
+      left++;
+    }
+  }
+
+  return result;
+}
+
 
 int main() {
   int arr[] = { 1, 2, 3, 1, 4, 5, 2, 3, 6 };

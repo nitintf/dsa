@@ -70,6 +70,8 @@ vector<int> countNoOfAnagrams(string s, string p) {
 }
 
 // Optimal aproach
+// TC: O(n)
+// SC: O(1)
 vector<int> findAnagrams(string s, string p) {
   int s_len = s.length();
   int p_len = p.length();

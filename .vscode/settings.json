@@ -120,6 +120,7 @@
     "concepts": "cpp",
     "algorithm": "cpp",
     "list": "cpp",
-    "deque": "cpp"
+    "deque": "cpp",
+    "queue": "cpp"
   }
 }
