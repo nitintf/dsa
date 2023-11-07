@@ -1,9 +1,11 @@
 #include <map>
 #include <algorithm>
 
+using namespace std;
+
 int lenOfLongSubarr(int A[], int N, int K)
 {
-  std::unordered_map<int, int> sumToIndex;
+  unordered_map<int, int> sumToIndex;
   int maxLen = 0;
   int currentSum = 0;
 
@@ -15,7 +17,7 @@ int lenOfLongSubarr(int A[], int N, int K)
     }
 
     if (sumToIndex.find(currentSum - K) != sumToIndex.end()) {
-      maxLen = std::max(maxLen, i - sumToIndex[currentSum - K]);
+      maxLen = max(maxLen, i - sumToIndex[currentSum - K]);
     }
 
     if (sumToIndex.find(currentSum) == sumToIndex.end()) {
