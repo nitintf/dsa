@@ -21,7 +21,6 @@ struct petrolPump
   int distance;
 };
 
-
 int tour(petrolPump p[], int n) {
   int balance = 0;
   int start = 0;
