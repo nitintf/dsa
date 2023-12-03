@@ -4,6 +4,16 @@
 
 using namespace std;
 
+/**
+ * Finds the length of the longest substring in a given string `s` such that every character in the substring appears at least `k` times.
+ *
+ * @param s the input string
+ * @param k the minimum number of times each character should appear in the substring
+ *
+ * @return the length of the longest substring that satisfies the condition, or -1 if no such substring exists
+ *
+ * @throws None
+ */
 int longestSubstring(string s, int k) {
   int n = s.size();
 
