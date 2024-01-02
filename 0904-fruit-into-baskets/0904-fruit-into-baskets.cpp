@@ -18,11 +18,8 @@ public:
             int f = fruits[right];
             fruitsMap[f]++;
             
-            if(fruitsMap.size() < 2) {
-                right++;
-            } else if (fruitsMap.size() == 2) {
+            if (fruitsMap.size() == 2) {
                 max_count = max(max_count, right - left + 1);
-                right++;
             } else if (fruitsMap.size() > 2) {
                 while(fruitsMap.size() > 2) {
                     fruitsMap[fruits[left]]--;
@@ -31,8 +28,9 @@ public:
                     }
                     left++;
                 }
-                right++;
             }
+            
+            right++;
         }
         
         if (fruitsMap.size() == 1) {
