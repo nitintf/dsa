@@ -1,5 +1,14 @@
-create_project:
-	mkdir $(PROJECT_NAME)
-	echo "Solution file." > $(PROJECT_NAME)/solution.cpp
-	echo "Notes file." > $(PROJECT_NAME)/notes.md
-	echo "Readme file." > $(PROJECT_NAME)/readme.md
+.DEFAULT_GOAL := create
+
+.PHONY: create
+
+create:
+	$(eval FOLDER_NAME := $(filter-out $@,$(MAKECMDGOALS)))
+	@mkdir -p $(FOLDER_NAME)
+	@echo "#include<vector>\n#include<iostream>\n#include<string>\n\nusing namespace std;\n\nint main() {}" > $(FOLDER_NAME)/solution.cpp
+	@touch $(FOLDER_NAME)/notes.excalidraw
+	@echo "$(FOLDER_NAME)" > $(FOLDER_NAME)/README.md
+	@echo "Folder and files created."
+
+%:
+	@:
