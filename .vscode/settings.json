@@ -57,6 +57,8 @@
   "C_Cpp_Runner.showCompilationTime": false,
   "C_Cpp_Runner.useLinkTimeOptimization": false,
   "files.associations": {
+    "*.excalidraw": "json",
+    "*.excalidrawlib": "json",
     "__bit_reference": "cpp",
     "__bits": "cpp",
     "__config": "cpp",
@@ -121,6 +123,7 @@
     "algorithm": "cpp",
     "list": "cpp",
     "deque": "cpp",
-    "queue": "cpp"
+    "queue": "cpp",
+    "set": "cpp"
   }
 }
