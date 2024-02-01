@@ -3,17 +3,3 @@
 ![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
 
 # DSA & Problems Solution with Python & C++
-
-This repository is dedicated to providing solutions to problems from [LeetCode](https://leetcode.com) using Python3 and C++. 
-
-## Python Solutions
-
-| # | Title | Solution Link | Time Complexity | Space Complexity |
-|---|-------|---------------|-----------------|------------------|
-|   |       |               |                 |                  |
-
-## C++ Solutions
-
-| # | Title | Solution Link | Time Complexity | Space Complexity |
-|---|-------|---------------|-----------------|------------------|
-|   |       |               |                 |                  |
