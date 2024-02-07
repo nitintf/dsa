@@ -40,6 +40,12 @@ public:
 
     return result;
   }
+
+  int minFallingPathSumTabulation(vector<vector<int>>& matrix) {
+    int m = matrix.size();
+    int n = matrix[0].size();
+    vector<vector<int>> dp(m, vector<int>(n, -1));
+  }
 };
 
 int main() {}
