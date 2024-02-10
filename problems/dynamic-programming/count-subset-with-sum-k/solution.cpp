@@ -7,12 +7,15 @@ using namespace std;
 
 class Solution {
   int findWaysHelper(vector<int>& arr, int target, int ind, vector<vector<int>>& dp) {
-    if (target == 0) {
-      return 1;
-    }
-
     if (ind == 0) {
-      return (arr[ind] == target) ? 1 : 0;
+      if (target == 0 && arr[0] == 0) {
+        return 2;
+      }
+      if (target == 0 || arr[ind] == target) {
+        return 1;
+      }
+
+      return 0;
     }
 
     if (dp[ind][target] != -1) {
