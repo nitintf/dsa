@@ -27,6 +27,26 @@ class Solution {
     return dp[idx][prevIdx + 1] = len;
   }
 
+  int lowerBound(vector<int> nums, int target) {
+    int n = nums.size();
+    int low = 0, high = n - 1;
+    int ans = n;
+
+    while (low <= high) {
+      int mid = (low + high) / 2;
+
+      if (nums[mid] >= target) {
+        high = mid - 1;
+        ans = mid;
+      }
+      else {
+        low = mid + 1;
+      }
+    }
+
+    return ans;
+  }
+
 public:
   int lengthOfLIS(vector<int>& nums) {
     int n = nums.size();
@@ -116,7 +136,23 @@ public:
     return temp;
   }
 
-  int lengthOfLISBinarySearch(vector<int>& nums) {}
+  int lengthOfLISBinarySearch(vector<int>& nums) {
+    int n = nums.size();
+    vector<int> result;
+
+    result.push_back(nums[0]);
+    for (int i = 1; i < n; i++) {
+      if (nums[i] > result.back()) {
+        result.push_back(nums[i]);
+      }
+      else {
+        int idxLB = lowerBound(result, nums[i]);
+        result[idxLB] = nums[i];
+      }
+    }
+
+    return result.size();
+  }
 };
 
 int main() {}
