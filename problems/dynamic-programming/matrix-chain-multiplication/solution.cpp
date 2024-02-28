@@ -38,6 +38,25 @@ public:
     vector<vector<int>> dp(n, vector<int>(n, -1));
     return minOperations(nums, 1, n - 1, dp);
   }
+
+  int matrixChainMultiplication(int* arr, int N) {
+    vector<vector<int>> dp(N + 1, vector<int>(N + 1, 0));
+
+    for (int i = N; i >= 1; i--) {
+      for (int j = i + 1; j <= N; j++) {
+        int steps = 0, mini = 1e9 + 7;
+
+        for (int k = i; k <= j - 1; k++) {
+          steps = (arr[i - 1] * arr[k] * arr[j]) + dp[i][k] + dp[k + 1][j];
+          mini = min(mini, steps);
+        }
+
+        dp[i][j] = mini;
+      }
+    }
+
+    return dp[1][N];
+  }
 };
 
 int main() {}
