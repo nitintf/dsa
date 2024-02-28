@@ -33,16 +33,21 @@ class Solution {
   }
 
 public:
+  // Top-Down
   int matrixChainMultiplication(vector<int>& nums) {
     int n = nums.size();
     vector<vector<int>> dp(n, vector<int>(n, -1));
     return minOperations(nums, 1, n - 1, dp);
   }
 
+  // Bottom-Up
+  // - Copy the base case
+  // - write down the changing parameters
+  // - copy the recurrence
   int matrixChainMultiplication(int* arr, int N) {
     vector<vector<int>> dp(N + 1, vector<int>(N + 1, 0));
 
-    for (int i = N; i >= 1; i--) {
+    for (int i = N; i > 0; i--) {
       for (int j = i + 1; j <= N; j++) {
         int steps = 0, mini = 1e9 + 7;
 
