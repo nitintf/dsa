@@ -8,6 +8,8 @@ using namespace std;
 Notes
 */
 
+// TC - O(n^2) - n states are changing and loop for n are running inside those states
+//  SC - O(n) / O(n) + O(n)
 class Solution {
   bool isPal(string& s, int i, int j) {
     while (i < j) {
