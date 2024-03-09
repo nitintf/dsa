@@ -48,7 +48,7 @@ public:
     return largestArea;
   }
 
-  int largestRectangleAreaBF(vector<int>& heights) {
+  int largestRectangleArea(vector<int>& heights) {
     int n = heights.size();
     int largestArea = 0;
 
@@ -83,6 +83,26 @@ public:
         rightHalf[i] = st.top() - 1;
       largestArea =
         max(largestArea, heights[i] * (rightHalf[i] - leftHalf[i] + 1));
+      st.push(i);
+    }
+
+    return largestArea;
+  }
+
+  int largestRectangleAreaOptimized(vector<int>& heights) {
+    int n = heights.size();
+    int largestArea = 0;
+    stack<int> st;
+
+    for (int i = 0; i <= n; i++) {
+      while (!st.empty() && (i == n || heights[st.top()] > heights[i])) {
+        int h = heights[st.top()];
+        st.pop();
+        int width;
+        if (st.empty()) width = i;
+        else width = i - st.top() - 1;
+        largestArea = max(largestArea, width * h);
+      }
       st.push(i);
     }
 
