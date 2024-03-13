@@ -18,8 +18,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/bitcs/code/dsa/problems/recursion/rat-maze",
-      "program": "/Users/bitcs/code/dsa/problems/recursion/rat-maze/build/Debug/outDebug"
+      "cwd": "/Users/bitcs/code/dsa/problems/linked-list/singly-linked-list",
+      "program": "/Users/bitcs/code/dsa/problems/linked-list/singly-linked-list/build/Debug/outDebug"
     },
     {
       "name": "C/C++: g++ build and debug active file",
