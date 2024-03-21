@@ -2,13 +2,29 @@
 
 .PHONY: create
 
+# Define a template for the C++ code
+define CPP_TEMPLATE
+#include<vector>
+#include<iostream>
+#include<string>
+
+using namespace std;
+
+/**
+Notes
+*/
+
+int main() {}
+endef
+export CPP_TEMPLATE
+
 create:
-	$(eval FOLDER_NAME := $(filter-out $@,$(MAKECMDGOALS)))
-	@mkdir -p $(FOLDER_NAME)
-	@echo "#include<vector>\n#include<iostream>\n#include<string>\n\nusing namespace std;\n\n/**\nNotes\n*/\n\nint main() {}" > $(FOLDER_NAME)/solution.cpp
-	@touch $(FOLDER_NAME)/notes.excalidraw
-	@echo "$(FOLDER_NAME)" > $(FOLDER_NAME)/README.md
-	@echo "Folder and files created."
+	@ABSOLUTE_PATH=$(filter-out $@,$(MAKECMDGOALS)); \
+	mkdir -p $$ABSOLUTE_PATH; \
+	echo "$$CPP_TEMPLATE" > $$ABSOLUTE_PATH/solution.cpp; \
+	touch $$ABSOLUTE_PATH/notes.excalidraw; \
+	echo "$$ABSOLUTE_PATH" > $$ABSOLUTE_PATH/README.md; \
+	echo "Folder and files created at $$ABSOLUTE_PATH."
 
 %:
 	@:
