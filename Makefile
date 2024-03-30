@@ -22,7 +22,6 @@ create:
 	@ABSOLUTE_PATH=$(filter-out $@,$(MAKECMDGOALS)); \
 	mkdir -p $$ABSOLUTE_PATH; \
 	echo "$$CPP_TEMPLATE" > $$ABSOLUTE_PATH/solution.cpp; \
-	# touch $$ABSOLUTE_PATH/notes.excalidraw; \
 	echo "$$ABSOLUTE_PATH" > $$ABSOLUTE_PATH/README.md; \
 	echo "Folder and files created at $$ABSOLUTE_PATH."
 
