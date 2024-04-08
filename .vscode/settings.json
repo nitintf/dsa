@@ -42,10 +42,7 @@
   "C_Cpp_Runner.compilerArgs": [],
   "C_Cpp_Runner.linkerArgs": [],
   "C_Cpp_Runner.includePaths": [],
-  "C_Cpp_Runner.includeSearch": [
-    "*",
-    "**/*"
-  ],
+  "C_Cpp_Runner.includeSearch": ["*", "**/*"],
   "C_Cpp_Runner.excludeSearch": [
     "**/build",
     "**/build/**",
@@ -127,7 +124,8 @@
     "list": "cpp",
     "deque": "cpp",
     "queue": "cpp",
-    "set": "cpp"
+    "set": "cpp",
+    "stack": "cpp"
   },
   "C_Cpp_Runner.msvcSecureNoWarnings": false
 }
