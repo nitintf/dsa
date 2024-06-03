@@ -13,3 +13,5 @@ output/
 *.lib
 *.pdb
 *.dSYM/
+
+*.DS_Store

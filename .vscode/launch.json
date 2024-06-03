@@ -18,8 +18,8 @@
       "type": "lldb",
       "request": "launch",
       "args": [],
-      "cwd": "/Users/bitcs/code/dsa/problems/linked-list/singly-linked-list",
-      "program": "/Users/bitcs/code/dsa/problems/linked-list/singly-linked-list/build/Debug/outDebug"
+      "cwd": "/Users/bitcs/code/dsa/problems/stack-queues/next-grater-element-I-496",
+      "program": "/Users/bitcs/code/dsa/problems/stack-queues/next-grater-element-I-496/build/Debug/outDebug"
     },
     {
       "name": "C/C++: g++ build and debug active file",
