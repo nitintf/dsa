@@ -11,15 +11,13 @@ def selectionSort(nums):
 
     return nums
 
+testCase1 = [3, 5, 1, 4, 7, 8]
+# test case to check adaptive performance
+testCase2 = [1, 2, 3, 4, 5, 6]
+testCase3 = [8, 8, 6, 6, 1, 2]
+testCase4 = [1, 3, 2, 5, 4]
 
-if __name__ == "__main__":
-    testCase1 = [3, 5, 1, 4, 7, 8]
-    # test case to check adaptive performance
-    testCase2 = [1, 2, 3, 4, 5, 6]
-    testCase3 = [8, 8, 6, 6, 1, 2]
-    testCase4 = [1, 3, 2, 5, 4]
-
-    print(selectionSort(testCase1))
-    print(selectionSort(testCase2))
-    print(selectionSort(testCase3))
-    print(selectionSort(testCase4))
+print(selectionSort(testCase1))
+print(selectionSort(testCase2))
+print(selectionSort(testCase3))
+print(selectionSort(testCase4))

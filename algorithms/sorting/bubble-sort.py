@@ -32,10 +32,11 @@ def bubble_sort(nums):
         if not swapped:
             break
 
-    print("Total Swapped Elements: ", noOfSwapped)
+    # print("Total Swapped Elements: ", noOfSwapped)
     return nums
 
 
+@timer
 def recursiveBubbleSort(nums, n):
     # Base case
     if n == 1:
@@ -47,7 +48,6 @@ def recursiveBubbleSort(nums, n):
 
     return recursiveBubbleSort(nums, n - 1)
 
-
 if __name__ == '__main__':
     testCase1 = [3, 5, 1, 4, 7, 8]
     # test case to check adaptive performance
@@ -55,8 +55,8 @@ if __name__ == '__main__':
     testCase3 = [8, 8, 6, 6, 1, 2]
     testCase4 = [1, 3, 2, 5, 4]
 
-    print(bubble_sort(testCase1))
-    print(bubble_sort(testCase2))
-    print(bubble_sort(testCase3))
-    print(bubble_sort(testCase4))
-    print(recursiveBubbleSort(testCase1, len(testCase1)))
+    print(bubble_sort(testCase1), len(testCase1))
+    # print(bubble_sort(testCase2))
+    # print(bubble_sort(testCase3))
+    # print(bubble_sort(testCase4))
+    # print(recursiveBubbleSort(testCase1, len(testCase1)))
