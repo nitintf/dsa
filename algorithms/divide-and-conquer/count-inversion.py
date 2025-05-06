@@ -55,6 +55,10 @@ def countInversion(nums: list[int]) -> tuple[int, list[int]]:
 
     return leftInversionCount + rightInversionCount + splitInversionCount, sortedNums
 
+def numberOfInversions(nums):
+    count, _ = countInversion(nums)
+    return count
+
 
 if __name__ == "__main__":
     arr1 = [1, 2, 3, 4, 5]
