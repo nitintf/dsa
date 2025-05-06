@@ -10,6 +10,27 @@ asymptotic improvement becomes noticeable.
 Assumptions:
 - Input matrices are square (n x n) and n is a power of 2.
 
+Strassen's 7 Multiplication Steps:
+
+Let A, B be n x n matrices divided into quadrants:
+A = |A11 A12|   B = |B11 B12|
+    |A21 A22|       |B21 B22|
+
+The 7 products are:
+1. M1 = (A11 + A22) * (B11 + B22)
+2. M2 = (A21 + A22) * B11
+3. M3 = A11 * (B12 - B22)
+4. M4 = A22 * (B21 - B11)
+5. M5 = (A11 + A12) * B22
+6. M6 = (A21 - A11) * (B11 + B12)
+7. M7 = (A12 - A22) * (B21 + B22)
+
+The resulting quadrants of the product matrix C are then:
+C11 = M1 + M4 - M5 + M7
+C12 = M3 + M5
+C21 = M2 + M4
+C22 = M1 + M3 - M2 + M6
+
 """
 
 
